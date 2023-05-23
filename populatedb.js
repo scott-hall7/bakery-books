@@ -1,7 +1,4 @@
 #! /usr/bin/env node
-console.log(
-'This script populates some test product, product types, and ingredients to your database. Specified database as argument - e.g.: node populatedb "mongodb+srv://passwordone:passwordone@bakery-books.511aeom.mongodb.net/?retryWrites=true&w=majority"'
-);
 // Get arguments passed on command line
 const userArgs = process.argv.slice(2);
 
