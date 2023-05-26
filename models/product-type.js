@@ -8,7 +8,7 @@ const ProductTypeSchema = new Schema({
 });
 
 ProductTypeSchema.virtual("url").get(function () {
-    return `/producttype/${this._id}`;
+    return `/inventory/producttype/${this._id}`;
 });
   
 module.exports = mongoose.model("Product Type", ProductTypeSchema);

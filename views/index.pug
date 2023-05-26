@@ -2,4 +2,11 @@ extends layout
 
 block content
   h1= title
-  p Welcome to #{title}
+  p Welcome to #[em Bakery Books], a place where you can manage your bakeries inventory.
+
+  p The bakery has the following inventory:
+
+  ul
+    li #[strong Product:] !{product_count}
+    li #[strong Product Types:] !{producttype_count}
+    li #[strong Ingredients:] !{ingredient_count}

@@ -1,0 +1,18 @@
+extends layout
+
+block content
+
+  h1 Product Type: #{product_type.name}
+
+  div(style='margin-left:20px;margin-top:20px')
+
+    h4 Products
+
+    dl
+      each product in products_producttypes
+        dt
+          a(href=product.url) #{product.name}
+        dd #{product.description}
+
+      else
+        p This product type has no products.

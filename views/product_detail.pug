@@ -1,0 +1,16 @@
+extends layout
+
+block content
+  h1 #{title}
+
+  p #[strong Product: ] #{product.name}
+  p #[strong Description: ] #{product.description}
+  p #[strong Product Type: ] 
+    a(href=product.product_type.url) #{product.product_type.name}
+  p #[strong Price: ] $#{product.price}
+  p #[strong In Stock: ] #{product.quantity}
+  p #[strong Ingredients: ]
+  ul
+    each val in product.ingredients
+      li 
+        a(href=val.url) #{val.name}

@@ -1,0 +1,17 @@
+extends layout
+
+block content
+  h1 #{title}
+
+  form(method='POST' action='')
+    div.form-group
+      label(for='name') Product Type:
+      input#name.form-control(type='text', placeholder='Food, Drink, etc.' name='name' value=(undefined===producttype ? '' : producttype.name))
+      label(for='description') Description:
+      input#name.form-control(type='text', placeholder='Describe the product type.' name='description' value=(undefined===producttype ? '' : producttype.description))
+    button.btn.btn-primary(type='submit') Submit
+
+  if errors
+   ul
+    for error in errors
+     li!= error.msg
